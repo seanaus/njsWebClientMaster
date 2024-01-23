@@ -1,0 +1,22 @@
+<div toolBar>
+    <div id="menu" class="material-icons" icon onclick="toggleNavPills()">menu</div>
+</div>
+<div navBar id="{{navBar.id}}">
+    {{#each navBar.items}}
+    <a navPill navLink {{ isSelected ../url this.route }} class="{{ setUp this.visible ../auth }}"
+        href="{{this.route}}" data-action="nav-toggle-collapse">
+        <div class="material-icons" icon data-action="nav-toggle-collapse">{{this.matIcon}}</div>
+        <div iconLabel data-action="nav-toggle-collapse">{{this.caption}}</div>
+    </a>
+    {{/each}}
+</div>
+
+<script>
+
+    const toggleNavPills = () => {
+        const navPills = document.querySelectorAll("[data-action='nav-toggle-collapse']");
+        for (navPill of navPills) {
+            navPill.classList.toggle("isCollapsed");
+        }
+    }
+</script>

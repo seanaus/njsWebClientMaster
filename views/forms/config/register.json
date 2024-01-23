@@ -1,0 +1,60 @@
+{
+    "title" : "Register New User",
+    "fields": {
+        "forename": [
+            {
+                "name": "isRequired",
+                "value": true,
+                "message": " is a required field"
+            }
+        ],
+        "surname": [
+            {
+                "name": "isRequired",
+                "value": true,
+                "message": " is a required field"
+            }
+        ],
+        "email": [
+            {
+                "name": "isRequired",
+                "value": true,
+                "message": " is a required field"
+            },
+            {
+                "name": "isEmail",
+                "value": true,
+                "message": " invalid email"
+            }
+        ],
+        "password": [
+            {
+                "name": "isRequired",
+                "value": true,
+                "message": " is a required field"
+            },
+            {
+                "name": "min",
+                "value": 8,
+                "message": " should be min ${min} chars"
+            },
+            {
+                "name": "isPassword",
+                "value": true,
+                "message": " should be alpha numeric"
+            }
+        ],
+        "password2": [
+            {
+                "name": "isPassword",
+                "value": true,
+                "message": " should be alpha numeric"
+            },
+            {
+                "name": "matchTo",
+                "value": "password",
+                "message": " does not match ${matchTo}"
+            }
+        ]
+    }
+}

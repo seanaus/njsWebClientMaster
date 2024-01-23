@@ -1,0 +1,35 @@
+/* [usersContainer] {
+    display: block;
+    border: 1px solid black;
+    padding: 15px;
+} */
+[usersContainer] {
+    /* display: grid;
+    width: 80%;
+    margin: 15px auto;
+    /* border: 1px solid black; */
+    /* padding: 15px;
+    grid-template-rows: 50px auto;
+    grid-template-columns: auto auto auto; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin: 0 auto;
+    /* height: 200px; */
+
+}
+
+[headerCell] {
+    /* background-color: gray; */
+    border-right: 1px solid gray;
+    text-align: center;
+    font-size: x-small;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+[cell] {
+    /* background-color: #ff00ff; */
+    padding: 5px;
+    text-align: left;
+}

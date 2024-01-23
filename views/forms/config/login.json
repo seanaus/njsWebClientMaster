@@ -1,0 +1,34 @@
+{
+    "title" : "Login Existing User",
+    "fields": {
+        "email": [
+            {
+                "name": "isRequired",
+                "value": true,
+                "message": " is a required field"
+            },
+            {
+                "name": "isEmail",
+                "value": true,
+                "message": " invalid email"
+            }
+        ],
+        "password": [
+            {
+                "name": "isRequired",
+                "value": true,
+                "message": " is a required field"
+            },
+            {
+                "name": "min",
+                "value": 8,
+                "message": " should be min ${min} chars"
+            },
+            {
+                "name": "isPassword",
+                "value": true,
+                "message": " should be alpha numeric"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+INSTALL
+npm install express
+npm install path
+npm install serve-favicon
+npm install material-icons@latest
+npm install @fontsource/material-icons
+npm install express-handlebars --save
+npm install dotenv
+npm install cookie-parser
+npm install webpack webpack-cli
+npm install firebase
+//npm install firebase-admin
+npm install jsonwebtoken

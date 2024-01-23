@@ -1,0 +1,10 @@
+{{> navBar}}
+<h3 h3>{{title}}</h3>
+<div usersContainer>
+    <div headerCell>Name</div>
+    <div headerCell>Email</div>
+    <div headerCell>Verified</div>
+    {{#each users}}
+    {{> userCard }}
+    {{/each}}
+</div>

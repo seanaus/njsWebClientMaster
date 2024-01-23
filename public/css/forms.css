@@ -1,0 +1,66 @@
+[formsContainer] {
+    display: block;
+    margin: 10px;
+}
+
+[formsMain] {
+    padding: 10px;
+    border-radius: 15px;
+    display: grid;
+}
+
+[formsHeading] {
+    padding: 15px 0px;
+
+}
+
+[formsTextBox] {
+    width: 100%;
+    border: none;
+    background: transparent;
+    margin: 5px 0px 0px 0px;
+    padding: 8px 0px;
+}
+
+[formsTextBox]:focus {
+    outline: none;
+}
+
+[formsTextBoxLabel] {
+    width: 100%;
+    font-size: xx-small;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+    padding: 2px;
+}
+
+[formsErrorOverlaySource] {
+    border-left: 1px solid var(--themeColorIsSelected);
+    border-right: 1px solid var(--themeColorIsSelected);
+    border-radius: 5px;
+}
+
+[formsErrorOverlayLabel] {
+    padding: 5px;
+    color: var(--themeColorIsSelected);
+    text-transform: uppercase;
+    font-size: xx-small;
+    text-align: center;
+    visibility: hidden;
+}
+
+[formsErrorOverlayLabelOn] {
+    visibility: visible !important;
+}
+
+@media only screen and (min-width: 768px) {
+    [formsContainer] {
+        display: inline;
+    }
+
+    [formsMain] {
+        margin-top: 100px !important;
+        width: 350px;
+    }
+}

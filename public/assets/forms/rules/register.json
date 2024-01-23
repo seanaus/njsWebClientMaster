@@ -1,0 +1,59 @@
+{
+    "fields": [
+        {
+            "forename": [
+                {
+                    "name": "isRequired",
+                    "value": true,
+                    "message": " is a required field"
+                }
+            ]
+        },
+        {
+            "surname": [
+                {
+                    "name": "isRequired",
+                    "value": true,
+                    "message": " is a required field"
+                }
+            ]
+        },
+        {
+            "email": [
+                {
+                    "name": "isRequired",
+                    "value": true,
+                    "message": " is a required field"
+                },
+                {
+                    "name": "isEmail",
+                    "value": true,
+                    "message": " invalid email"
+                }
+            ]
+        },
+        {
+            "password": [
+                {
+                    "name": "isRequired",
+                    "value": true,
+                    "message": " is a required field"
+                },
+                {
+                    "name": "min",
+                    "value": 8,
+                    "message": " should be min ${min} chars"
+                }
+            ]
+        },
+        {
+            "password2": [
+                {
+                    "name": "matchTo",
+                    "value": "password",
+                    "message": " does not match ${matchTo}"
+                }
+            ]
+        }
+    ]
+}

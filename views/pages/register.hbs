@@ -1,0 +1,33 @@
+{{> navBar}}
+<form formsContainer action="/{{form.name}}" method="POST">
+    <div _center_ formsMain borderBox>
+        <div col _text_ h3 formsHeading>{{form.title}}</div>
+        {{#each form.fields}}
+        <div col>
+            <label for="{{this.name}}" formsTextBoxLabel>{{this.name}}:
+                <input type="{{fieldType this.rules}}" id="{{this.name}}" name="{{this.name}}" formsTextBox
+                    onfocus="refreshTextBox()" {{ errorOverlaySource this.name ../form.errorOverlay.name }} value={{
+                    setValue ../form this.name }}>
+            </label>
+            <label formsErrorOverlayLabel {{ errorOverlayLabel this.name ../form.errorOverlay.name }}>{{
+                ../form.errorOverlay.message }}</label>
+        </div>
+        {{/each}}
+        <div row _right>
+            <a href="/login" id="btnLogInLink" btn>Log In</a>
+            <input type="submit" id="btnSubmitRegister" btn>
+        </div>
+    </div>
+</form>
+<script>
+    const refreshTextBox = () => {
+        const textBoxes = document.querySelectorAll("input[formsTextBox]")
+        const errorOverlayLabels = document.querySelectorAll("label[formsErrorOverlayLabel]")
+        textBoxes.forEach(textBox => {
+            textBox.removeAttribute("formsErrorOverlaySource");
+        })
+        errorOverlayLabels.forEach(errorOverlayLabel => {
+            errorOverlayLabel.removeAttribute("formsErrorOverlayLabelOn");
+        })
+    }
+</script>

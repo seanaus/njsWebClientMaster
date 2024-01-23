@@ -1,0 +1,138 @@
+* {
+    cursor: default;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: Arial, Verdana, Helvetica, Tahoma, Trebuchet MS,
+        Times New Roman, Georgia, Garamond, Courier New,
+        Brush Script MT;
+    --themeBgColor: rgba(0, 0, 0, 0.8);
+    --themeBgColorHover: rgba(0, 0, 0);
+    --themeFColor: rgba(255, 255, 255, 0.8);
+    --themeFColorHover: rgba(255, 255, 255);
+    /* --themeColorIsSelected: rgba(145, 17, 68, 1); */
+    --themeColorIsSelected: rgba(169, 16, 121, 1);
+    background-color: var(--themeBgColor);
+    color: var(--themeFColor);
+}
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+a {
+    text-decoration: none;
+}
+[row] {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+[col] {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+[left_] {
+    margin: 0 auto 0 0;
+}
+[_right] {
+    margin: 0 0 0 auto;
+}
+[_center_] {
+    margin: 0 auto 0 auto;
+}
+[text_] {
+    text-align: left;
+}
+[_text_] {
+    text-align: center;
+}
+[_text] {
+    text-align: right;
+}
+[borderBox] {
+    border: 1px solid rgba(136, 136, 136, 0.4);
+    box-shadow: 5px 5px 8px rgba(136, 136, 136, 0.4);
+}
+[btn] {
+    background-color: var(--themeFColor);
+    color: var(--themeBgColor);
+    font-size: xx-small;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    border: transparent;
+    border-radius: 5px;
+    width: 75px;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0px 5px;
+}
+[btn]:hover {
+    cursor: pointer;
+    background-color: var(--themeFColorHover);
+}
+[h3] {
+    font-weight: bold;
+    font-size: medium;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--themeFColor);
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local("Material Icons"), local("MaterialIcons-Regular"),
+        url(MaterialIcons-Regular.woff2) format("woff2"),
+        url(MaterialIcons-Regular.woff) format("woff"),
+        url(MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}

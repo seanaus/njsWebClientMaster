@@ -1,0 +1,9 @@
+/* [col] {
+    padding: 5px 10px;
+} */
+
+[cell] {
+    /* background-color: #ff00ff; */
+    padding: 5px;
+    text-align: left;
+}
